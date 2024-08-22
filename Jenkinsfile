@@ -3,14 +3,6 @@ pipeline {
     label "slave"
   }
    stages {
-     stage('git install') {
-        steps {
-             sh'''
-             sudo yum update -y
-             sudo yum install git -y
-             '''
-        }
-     }
      stage('git checkout') {
        steps {
           git 'https://github.com/Pritam-Khergade/student-ui.git'
